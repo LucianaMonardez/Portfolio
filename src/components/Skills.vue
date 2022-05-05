@@ -2,7 +2,12 @@
   <v-card elevation="2" outlined max-width="1300" style="margin-right: 3em">
     <div class="item d-flex">
       <div v-for="skill in skills" :key="skill.id" class="skill">
-        <v-img :src="skill.img" class="img" contain></v-img>
+        <v-img
+          :aspect-ratio="16 / 9"
+          :src="skill.img"
+          class="img"
+          contain
+        ></v-img>
         <p class="text">{{ skill.title }}</p>
       </div>
     </div>

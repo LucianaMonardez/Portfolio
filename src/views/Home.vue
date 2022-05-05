@@ -6,12 +6,10 @@
         <h2 class="subtitles">Sobre mi</h2>
       </div>
       <AboutComponent />
-      <div>
-        <h2 class="subtitles">Mis Habilidades</h2>
-      </div>
+      <h2 class="subtitles">Mis Habilidades</h2>
       <SkillsComponent />
       <h2 class="subtitles">Proyectos</h2>
-      <ProjectsComponent />
+      <CardProjectsComponent />
     </div>
   </div>
 </template>
@@ -21,15 +19,14 @@
 import AboutComponent from "../components/About.vue";
 import TittleComponent from "../components/Title.vue";
 import SkillsComponent from "../components/Skills.vue";
-import ProjectsComponent from "../components/Projects.vue";
-TittleComponent;
+import CardProjectsComponent from "../components/CardProjects.vue";
 export default {
   name: "Home",
   components: {
     AboutComponent,
     TittleComponent,
     SkillsComponent,
-    ProjectsComponent,
+    CardProjectsComponent,
   },
 };
 </script>
