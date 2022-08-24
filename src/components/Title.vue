@@ -31,7 +31,7 @@ export default {};
 .container-div {
 }
 .img-bg {
-  background-image: url("https://wallpaperaccess.com/full/404506.jpg");
+  background-image: url("https://wallpaperaccess.com/full/3082237.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

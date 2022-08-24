@@ -10,7 +10,7 @@ export default {};
 
 <style>
 .container-footer {
-  width: 250%;
+  width: 100%;
   height: 50px;
   background-color: pink;
 }

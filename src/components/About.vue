@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <v-col class="about" width="50%">
     <p>
       Hola, soy Luciana, tengo 27 años y soy estudiante de la carrera de
       Licenciatura en Sistemas. Mi camino en el munco de la programacion empezó
@@ -15,7 +15,7 @@
       <v-btn depressed color="primary">Contact me!</v-btn>
       <v-btn depressed color="primary">My projects</v-btn>
     </div>
-  </div>
+  </v-col>
 </template>
 
 <script>

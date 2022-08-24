@@ -1,16 +1,18 @@
 <template>
-  <div class="home">
+<div class="d-flex">
+<v-col class=" pa-0">
+  <v-row class="ma-0">
     <TittleComponent />
-    <div class="contentClass">
-      <div>
-        <h2 class="subtitles">Sobre mi</h2>
-      </div>
+    </v-row>
+    <v-row align="center" class="contentClass pa-0 ma-0" style="width: 80%">
+        <h2 class="black">Sobre mi</h2>
       <AboutComponent />
       <h2 class="subtitles">Mis Habilidades</h2>
       <SkillsComponent />
       <h2 class="subtitles">Proyectos</h2>
       <CardProjectsComponent />
-    </div>
+    </v-row>
+  </v-col>
   </div>
 </template>
 
@@ -37,13 +39,14 @@ export default {
   flex-direction: column;
 }
 .contentClass {
-  margin-right: 5em;
-  margin-left: 5em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .subtitles {
   margin: 2em;
+}
+body.black {
+  color: orange !important;
 }
 </style>

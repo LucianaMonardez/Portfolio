@@ -1,23 +1,40 @@
 <template>
-  <div d-flex class="card-container">
-    <div class="card" v-for="project in projects" :key="project.id">
+  <div d-flex width="80%">
+    <v-col class="card-container pa-0" >
+    <v-card class="card" v-for="project in projects" :key="project.id">
       <div class="card-img">
+        
         <img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" alt="" />
       </div>
-      <div class="card-body">
-        <div class="tag-container" d-flex justify-space-between mb-6>
-          <span
+      
+      <v-card-title>
+        {{ project.title }}
+      
+      </v-card-title>
+      <v-card-text>
+         <v-row
+        align="center"
+        class="mx-0"
+      >
+          <v-chip
             v-for="item in project.technologies"
             :key="item"
-            class="tag tag-purple"
-            >{{ item }}</span
+            color="success"
+            >{{ item }}</v-chip
           >
-        </div>
-        <h4>{{ project.title }}</h4>
-        <p>{{ project.description }}</p>
+        <v-col><v-spacer class="mx-4"></v-spacer></v-col>
+          
+        
+       
+        {{ project.description }}
+        </v-row>
+      </v-card-text>
+
+      <v-card-actions class="align-end">
         <v-btn color="primary">Repositorio</v-btn>
-      </div>
-    </div>
+        </v-card-actions>
+    </v-card>
+    </v-col>
   </div>
 </template>
 
@@ -34,7 +51,6 @@ export default {
 <style>
 .card-container {
   display: flex;
-  width: 1300px;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
@@ -74,4 +90,4 @@ export default {
   font-size: 13px;
   margin: 0 0 40px;
 }
-</style>
+</style> 
