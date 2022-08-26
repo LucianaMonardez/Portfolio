@@ -1,7 +1,8 @@
 <template>
-  <div d-flex width="80%">
-    <v-col class="card-container pa-0" >
-    <v-card class="card" v-for="project in projects" :key="project.id">
+  <div class="d-flex">
+    <v-col class="card-container pa-0"  >
+    <v-card class="card " v-for="project in projects" :key="project.id">
+      <v-col class="d-flex flex-column">
       <div class="card-img">
         
         <img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" alt="" />
@@ -22,17 +23,14 @@
             color="success"
             >{{ item }}</v-chip
           >
-        <v-col><v-spacer class="mx-4"></v-spacer></v-col>
-          
-        
-       
         {{ project.description }}
         </v-row>
       </v-card-text>
 
-      <v-card-actions class="align-end">
+      <v-card-actions class="align-self-end">
         <v-btn color="primary">Repositorio</v-btn>
         </v-card-actions>
+        </v-col>
     </v-card>
     </v-col>
   </div>

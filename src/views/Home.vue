@@ -1,18 +1,25 @@
 <template>
-<div class="d-flex">
-<v-col class=" pa-0">
-  <v-row class="ma-0">
-    <TittleComponent />
-    </v-row>
-    <v-row align="center" class="contentClass pa-0 ma-0" style="width: 80%">
-        <h2 class="black">Sobre mi</h2>
+<div>
+<v-container fluid class=" pa-0 ma-0">
+  <TittleComponent />
+  </v-container>
+  
+  <v-container>
+<v-col class="d-flex flex-column pa-0" align="center">
+    <v-row class="flex-column justify-center">
+        <h2>Sobre mi</h2>
       <AboutComponent />
+      </v-row>
+      <v-row class="flex-column justify-center">
       <h2 class="subtitles">Mis Habilidades</h2>
       <SkillsComponent />
+      </v-row>
+      <v-row class="justify-center">
       <h2 class="subtitles">Proyectos</h2>
       <CardProjectsComponent />
     </v-row>
-  </v-col>
+    </v-col>
+  </v-container>
   </div>
 </template>
 
@@ -39,7 +46,6 @@ export default {
   flex-direction: column;
 }
 .contentClass {
-  display: flex;
   flex-direction: column;
   align-items: center;
 }

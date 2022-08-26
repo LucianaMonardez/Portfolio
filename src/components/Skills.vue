@@ -1,4 +1,5 @@
 <template>
+<div>
   <v-card elevation="2" outlined width="80%">
     <div class="item d-flex">
       <div v-for="skill in skills" :key="skill.id" class="skill">
@@ -12,6 +13,7 @@
       </div>
     </div>
   </v-card>
+  </div>
 </template>
 
 <script>
