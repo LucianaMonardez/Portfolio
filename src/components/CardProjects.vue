@@ -1,37 +1,39 @@
 <template>
   <div class="d-flex">
-    <v-col class="card-container pa-0"  >
-    <v-card class="card " v-for="project in projects" :key="project.id">
-      <v-col class="d-flex flex-column">
-      <div class="card-img">
-        
-        <img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" alt="" />
-      </div>
-      
-      <v-card-title>
-        {{ project.title }}
-      
-      </v-card-title>
-      <v-card-text>
-         <v-row
-        align="center"
-        class="mx-0"
-      >
-          <v-chip
-            v-for="item in project.technologies"
-            :key="item"
-            color="success"
-            >{{ item }}</v-chip
-          >
-        {{ project.description }}
-        </v-row>
-      </v-card-text>
+    <v-col class="card-container pa-0">
+      <v-card class="card d-flex" v-for="project in projects" :key="project.id">
+        <v-col class="flex-column">
+          <div class="card-img">
+            <img
+              src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+              alt=""
+            />
+          </div>
 
-      <v-card-actions class="align-self-end">
-        <v-btn color="primary">Repositorio</v-btn>
-        </v-card-actions>
+          <v-card-title>
+            {{ project.title }}
+          </v-card-title>
+          <v-card-text>
+            <v-row class="mx-0">
+              <v-chip
+                v-for="item in project.technologies"
+                :key="item"
+                color="success"
+                >{{ item }}</v-chip
+              >
+              <div class="text-left">
+                {{ project.description }}
+              </div>
+            </v-row>
+          </v-card-text>
+
+          <v-card-actions class="flex-column">
+            <div>
+              <v-btn color="primary" class="mt-auto">Repositorio</v-btn>
+            </div>
+          </v-card-actions>
         </v-col>
-    </v-card>
+      </v-card>
     </v-col>
   </div>
 </template>

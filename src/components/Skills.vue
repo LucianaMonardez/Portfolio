@@ -1,18 +1,18 @@
 <template>
-<div>
-  <v-card elevation="2" outlined width="80%">
-    <div class="item d-flex">
-      <div v-for="skill in skills" :key="skill.id" class="skill">
-        <v-img
-          :aspect-ratio="16 / 9"
-          :src="skill.img"
-          class="img"
-          contain
-        ></v-img>
-        <p class="text">{{ skill.title }}</p>
+  <div>
+    <v-card elevation="2" outlined>
+      <div class="item d-flex">
+        <div v-for="skill in skills" :key="skill.id" class="skill">
+          <v-img
+            :aspect-ratio="16 / 9"
+            :src="skill.img"
+            class="img"
+            contain
+          ></v-img>
+          <p class="text">{{ skill.title }}</p>
+        </div>
       </div>
-    </div>
-  </v-card>
+    </v-card>
   </div>
 </template>
 
